@@ -10,7 +10,7 @@ function Weather(props) {
   const geoSucces = (position) => {
     const request = `https://geocode-maps.yandex.ru/1.x/?apikey=${yandexApiKey}&format=json&geocode=${position.coords.longitude},${position.coords.latitude}`
     axios.get(request).then(response => {
-      citySeatch(response.data.response.GeoObjectCollection.featureMember[1].GeoObject.name)
+      citySeatch(response.data.response.GeoObjectCollection.featureMember[1].GeoObject.metaDataProperty.GeocoderMetaData.Address.Components[4].name)
     }).catch((err) => console.error(err))
   }
 
