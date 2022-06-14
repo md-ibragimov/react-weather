@@ -8,8 +8,10 @@ function Weather(props) {
   const apiKey = '373d1bf05ee84c3cbf6140259221306';
   const yandexApiKey = '786e5105-838d-4f9b-a187-d40ebac0de95';
   const geoSucces = (position) => {
+    setCity('isSend')
     const request = `https://geocode-maps.yandex.ru/1.x/?apikey=${yandexApiKey}&format=json&geocode=${position.coords.longitude},${position.coords.latitude}`
     axios.get(request).then(response => {
+      setCity('ready')
       citySeatch(response.data.response.GeoObjectCollection.featureMember[1].GeoObject.metaDataProperty.GeocoderMetaData.Address.Components[4].name)
     }).catch((err) => console.error(err))
   }
