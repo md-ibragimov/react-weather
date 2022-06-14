@@ -1,0 +1,189 @@
+.window {
+  width: 100%;
+  height: 350px;
+  background-color: #fff;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  h2 {
+    width: 100%;
+    height: 15%;
+    margin: 0;
+    padding: 0 0 0 3%;
+    color: #43AFFC;
+    font-weight: 500;
+    font-size: 24px;
+    border-bottom: 1px solid #D7D7D7;
+  }
+  .transient {
+    display: none;
+  }
+  .city {
+    width: 90%;
+    height: 55px;
+    margin: 0 auto;
+    border-radius: 7px;
+    border: 2px solid #ccc;
+    text-align: center;
+    outline: none;
+    font-size: 19px;
+    &:focus {
+      border: 2px solid #43AFFC;
+    }
+    &::placeholder {
+      color: #ccc;
+    }
+  }
+  .separation {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span {
+      width: 40%;
+      height: 2px;
+      background-color: #D7D7D7;
+    }
+    p {
+      color: #D7D7D7;
+      font-size: 22px;
+    }
+  }
+  .users-location {
+    width: 90%;
+    height: 60px;
+    margin: 0 auto;
+    background-color: #43AFFC;
+    border-radius: 7px;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    &:hover {
+      background-color: #1d9ffc;
+    }
+  }
+
+}
+.results-window {
+  padding-bottom: 2%;
+  align-items: center;
+  width: 100%;
+  height: 600px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 7px;
+  .window-header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    * {
+      margin-left: 3%;
+    }
+    .back {
+      width: 30px;
+      height: 30px;
+      border: none;
+      background: url('../icons/arrow-left.png') no-repeat no-repeat center;
+      background-size: 100%;
+      cursor: pointer;
+    }
+    h2 {
+      color: #43AFFC;
+      font-size: 20px;
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    *{
+      margin-bottom: 4%;
+      &:last-child {
+        margin: 0;
+      }
+    }
+    .text-forecast,
+    .geoposition {
+      font-size: 26px;
+    }
+    .ico {
+      width: 125px;
+      height: 125px;
+      margin: 0 auto;
+      svg {
+        width: 100%;
+        height: 100%; 
+      } 
+    }
+    .value {
+      font-size: 4.5em;
+      text-align: center;
+    }
+  }
+  .feelstemp-humidity {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ccc;
+    .feelstemp {
+      width: 50%;
+      height: 100%;
+      border-right: 1px solid #ccc;
+      display: flex;
+      .ico {
+        width: 50%;
+        height: 100%;
+        background: url(../icons/thermometer.png) no-repeat no-repeat center;
+        background-size: 60%;
+      }
+      .feels-container {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        span {
+          font-size: 20px;
+        }
+      }
+    }
+    .humidity {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      .ico {
+        width: 50%;
+        height: 100%;
+        background: url(../icons/water-drop.png) no-repeat no-repeat center;
+        background-size: 40%;
+      }
+      .humidity-container {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        span {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 450px) {
+  .window {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .results-window {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
