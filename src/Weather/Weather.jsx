@@ -71,7 +71,6 @@ function Weather(props) {
         setTemp(response.data)
         setWeatherIco(response.data.current.condition.code)
         setCity('ready');
-        console.log(response.data)
       }).catch(() => setCity('error'))
   }
   const updateCity = (key) => {
