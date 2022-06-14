@@ -14,7 +14,7 @@ function Weather(props) {
     }).catch((err) => console.error(err))
   }
 
-  const geoError = (err) => {console.error(err)}
+  const geoError = (err) => {citySeatch('')};
   const geopositionFunc = () => {
     return navigator.geolocation.getCurrentPosition(geoSucces, geoError);
   }
