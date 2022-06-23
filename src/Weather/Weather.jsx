@@ -3,12 +3,12 @@ import styles from './Weather.module.scss'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import GlobalSvgSelector from './GlobalSvgSelector';
-
 function Weather(props) {
   const apiKey = '373d1bf05ee84c3cbf6140259221306';
   const yandexApiKey = '786e5105-838d-4f9b-a187-d40ebac0de95';
   const geoSucces = (position) => {
     setCity('isSend')
+    console.log(position.coords.longitude)
     const request = `https://geocode-maps.yandex.ru/1.x/?apikey=${yandexApiKey}&format=json&geocode=${position.coords.longitude},${position.coords.latitude}`
     axios.get(request).then(response => {
       setCity('ready')
