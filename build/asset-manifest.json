@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "./static/css/main.5240cb56.css",
-    "main.js": "./static/js/main.a50fdc8b.js",
+    "main.js": "./static/js/main.4838cb27.js",
     "static/media/water-drop.png": "./static/media/water-drop.6da41255c5ff863afc3d.png",
     "static/media/thermometer.png": "./static/media/thermometer.3377c443c19adcb2e33e.png",
     "index.html": "./index.html",
     "main.5240cb56.css.map": "./static/css/main.5240cb56.css.map",
-    "main.a50fdc8b.js.map": "./static/js/main.a50fdc8b.js.map"
+    "main.4838cb27.js.map": "./static/js/main.4838cb27.js.map"
   },
   "entrypoints": [
     "static/css/main.5240cb56.css",
-    "static/js/main.a50fdc8b.js"
+    "static/js/main.4838cb27.js"
   ]
 }
